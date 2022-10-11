@@ -12,9 +12,9 @@ class LoginPage(BasePage):
         assert "login" in self.browser.current_url, "Expected login in url"
 
     def should_be_login_form(self):
-        login_form = self.browser.find_element(LoginPageLocators.LOGIN_FORM)
+        login_form = self.browser.find_element(*LoginPageLocators.LOGIN_FORM)
         assert login_form, "Should be login form"
 
     def should_be_register_form(self):
-        register_form = self.browser.find_element(LoginPageLocators.REGISTER_FORM)
+        register_form = self.browser.find_element(*LoginPageLocators.REGISTER_FORM)
         assert register_form, "Should be register form"
